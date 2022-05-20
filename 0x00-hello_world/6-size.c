@@ -3,8 +3,7 @@
 /**
  * main - print type values
  *
- * var - types
- ** return: none
+ ** Return: none
 */
 
 int main(void)
