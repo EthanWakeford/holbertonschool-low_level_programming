@@ -1,10 +1,16 @@
 #include <stdio.h>
 
+/**
+ * main - yada blah
+ *
+ * var - woof
+ * Return: sadfdaf
+*/
+
 int main(void)
 {
 	/*string init*/
-	char str[] = "Programming is like building a multilingual puzzle";
+	puts("\"Programming is like building a multilingual puzzle");
 
-	puts(str);
 	return (0);
 }
