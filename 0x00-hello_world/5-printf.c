@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - int
- * var - asdfsalkdfj
- * return: asdf
- */
+ * main - yada blah
+ *
+ * var - woof
+ * Return: sadfdaf
+*/
 
 int main(void)
 {
