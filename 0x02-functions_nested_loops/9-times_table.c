@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+*times_table - i hate this problem
+*
+*Return: none
+*/
+
 void times_table(void)
 {
 	int a, b, c;
@@ -31,8 +37,6 @@ void times_table(void)
 					}
 				}
 			}
-		
-		
 		_putchar('\n');
 		}
 }
