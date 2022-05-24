@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+*print_last_digit - prints last digit twice idk
+*
+*@c: integer
+*Return: last digit
+*/
+
 int print_last_digit(int c)
 {
 	c = c % 10;
