@@ -2,11 +2,9 @@
 
 int print_last_digit(int c)
 {
-	int i;
-
-	if (c < 0)
+	if (c < 48)
 		c = -c;
-	i = c % 10;
-	_putchar(i + '0');
-	return (i);
+	c = c % 10;
+	_putchar(c + '0');
+	return (c);
 }
