@@ -4,7 +4,7 @@
 *main - does fizzbuzz stuff
 */
 
-void main(void)
+int main(void)
 {
 	int x;
 
@@ -20,4 +20,5 @@ void main(void)
 			putchar(' ');
 		}
 	putchar('\n');
+	return (0);
 }
