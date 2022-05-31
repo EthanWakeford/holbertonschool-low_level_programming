@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+*print_number - prints an integer
+*
+*@n: integer to be printed
+*/
+
 void print_number(int n)
 {
 	int curr;
@@ -17,7 +23,7 @@ void print_number(int n)
 		else
 			print_number(n / 10);
 	}
-	if ( curr < 0)
+	if (curr < 0)
 		_putchar('0' + (-1 * curr));
 	else
 		_putchar('0' + curr);
