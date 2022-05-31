@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-*fizz_buzz = does fizzbuzz stuff
+*main - does fizzbuzz stuff
 */
 
 void main(void)
