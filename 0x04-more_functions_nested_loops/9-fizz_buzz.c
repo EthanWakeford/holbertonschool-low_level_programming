@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
-*main = does fizzbuzz stuff
+*fizzybuzzy = does fizzbuzz stuff
 */
 
-void main(void)
+void fizzybuzzy(void)
 {
 	int x;
 	char fizz[] = "Fizz";
