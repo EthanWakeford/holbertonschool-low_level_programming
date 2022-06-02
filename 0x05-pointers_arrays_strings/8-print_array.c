@@ -21,4 +21,6 @@ void print_array(int *a, int n)
 		else
 			printf("%d\n", a[x]);
 		}
+	if (n <= 0)
+		putchar('\n');
 }
