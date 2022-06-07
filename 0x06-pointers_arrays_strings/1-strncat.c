@@ -4,7 +4,8 @@
 *_strncat - concatenates one string to another to the nth element
 *@dest: string to be added onto
 *@src: string to be concatenated
-*return: dest
+*@n: how much to cat
+*Return: dest
 */
 
 char *_strncat(char *dest, char *src, int n)
