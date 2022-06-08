@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*strpbrk - searches a string for any of a set of bytes
+*_strpbrk - searches a string for any of a set of bytes
 *@s: string
 *@accept: bytes to search
 *Return: pointer to the byte in s that matches in accept, NULL no found
