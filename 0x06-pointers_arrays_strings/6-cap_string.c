@@ -8,24 +8,24 @@
 
 char *cap_string(char *s)
 {
-	int i, c;
-	int mem = 0;
-	char sep[] = " \t\n,;.!?\"(){}";
+	int i;
+	int mem = 1;
+	char sep[13] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		for (c = 0; sep[c] != '\0'; c++)
+		for (i = 0; i < 13; i++)
 		{
-			if (s[i] == sep[c])
+			if (*s == sep[i])
 			{
-				mem	= 1;
+				mem = 1;
 			}
 		}
-		if (mem)
+		if (mem == 1)
 		{
-			if ((s[i] >= 97) && (s[i] <= 122))
+			if (*s <= 'z' && *s >= 'a')
 			{
-				s[i] = s[i] - 32;
+				*s -= 32;
 				mem = 0;
 			}
 			else
@@ -33,6 +33,7 @@ char *cap_string(char *s)
 				mem = 0;
 			}
 		}
+		s++;
 	}
 	return (s);
 }
