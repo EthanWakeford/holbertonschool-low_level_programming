@@ -11,26 +11,30 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i = 0;
 
-	while (*haystack)
+	while (*haystack != '\0')
 	{
 		if (*haystack == *needle)
 		{
-			while (needle[i] && haystack[i])
+			while (needle[i] != '\0' && haystack[i] != '\0')
 			{
 				if (needle[i] != haystack[i])
 				{
 					return ('\0');
 				}
 				i++;
-				if (!haystack[i])
+				if (haystack[i] == '\0')
 				{
 					break;
 				}
 			}
 		}
+		if (haystack[i] == '\0')
+		{
+			break;
+		}
 		haystack++;
 	}
-	if (!*haystack)
+	if (*haystack == '\0')
 	{
 		return ('\0');
 	}
