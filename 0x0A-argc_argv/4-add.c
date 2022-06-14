@@ -5,6 +5,8 @@
 *@argc: num of args
 *@argv: pointer to array of args
 *Return: 0 if successful, 1 if not
+*/
+
 int main(int argc, char *argv[])
 {
 	int i, j, num, num2;
