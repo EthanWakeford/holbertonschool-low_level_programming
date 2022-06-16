@@ -14,6 +14,8 @@ int lengthof(char *str)
 	{
 		len++;
 	}
+	if len = 1
+		return (0);
 	return (len);
 }
 
