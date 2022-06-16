@@ -8,14 +8,14 @@
 
 int lengthof(char *str)
 {
-	int len = 1;
-
+	int len = 0;
+	
+	if (str == NULL)
+		return (0);
 	while (str[len])
 	{
 		len++;
 	}
-	if (len == 1)
-		return (0);
 	return (len);
 }
 
