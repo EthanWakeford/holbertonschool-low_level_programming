@@ -4,7 +4,7 @@ int stringlength(char *str)
 {
 	int i = 0;
 
-	if (str[i] == NULL)
+	if (str == NULL)
 		return (0);
 	while (str[i] != '\0')
 	{
