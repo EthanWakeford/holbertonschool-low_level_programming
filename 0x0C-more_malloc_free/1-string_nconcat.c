@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+*stringlength - returns length of string
+*@str: string to find
+*Return: i
+*/
+
 int stringlength(char *str)
 {
 	int i = 0;
@@ -12,6 +18,14 @@ int stringlength(char *str)
 	}
 	return (i);
 }
+
+/**
+*string_nconcat - concats 2 strings to Nth byte
+*@s1: string 1
+*@s2: string 2
+*@n: Nth byte
+*Return: pointer to new string
+*/
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
