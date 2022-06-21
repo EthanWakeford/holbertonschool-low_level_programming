@@ -29,7 +29,7 @@ int stringlength(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	int i = 0;
 	char *ptr;
 	int l1 = stringlength(s1);
 	int l2 = stringlength(s2);
