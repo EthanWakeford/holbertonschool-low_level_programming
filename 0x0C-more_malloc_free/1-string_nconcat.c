@@ -42,13 +42,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr = malloc((l1 + l2) + 1);
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; s1[i] != '\0'; i++)
+	if (s1 != NULL)
 	{
-		ptr[i] = s1[i];
+		for (i = 0; s1[i] != '\0'; i++)
+		{
+			ptr[i] = s1[i];
+		}
 	}
-	for (i = 0; i < (int)n && s2[i] != '\0'; i++)
+	if (s2 != NULL)
 	{
-		ptr[i + l1] = s2[i];
+		for (i = 0; i < (int)n && s2[i] != '\0'; i++)
+		{
+			ptr[i + l1] = s2[i];
+		}
 	}
 	ptr[i + l1] = '\0';
 	return (ptr);
