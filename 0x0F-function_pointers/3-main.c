@@ -9,24 +9,26 @@
 
 int main(int argc, char **argv)
 {
-	int a, b;
+	int a, b, cmpdiv, cmpmod;
 	int (*op)(int a, int b);
 
 	if (argc != 4)
-	{	
+	{
 		printf("ERROR\n");
-		exit (98);
+		exit(98);
 	}
 	op = get_op_func(argv[2]);
 	if (op == NULL)
 	{
 		printf("ERROR\n");
-		exit (99);
+		exit(99);
 	}
-	if (((strcmp(argv[2], "/") == 0) || (strcmp(argv[2], "%") == 0))&& (strcmp(argv[3], "0") == 0))
+	cmpdiv = (strcmp(argv[2], "/"));
+	cmpmod = (strcmp(argv[2], "%"));
+	if ((cmpdiv == 0 || cmpmod == 0) && (strcmp(argv[3], "0")) == 0)
 	{
 		printf("ERROR\n");
-		exit (100);
+		exit(100);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
