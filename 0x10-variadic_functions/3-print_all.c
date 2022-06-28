@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	int is_not_first = 0;
 
 	va_start(ap, format);
-	while (format != NULL && format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		if (is_not_first)
 			printf(", ");
@@ -32,10 +32,8 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(ap, char *));
 				break;
 			default:
-			{
 				is_not_first = 0;
 				break;
-			}
 		}
 	i++;
 	}
