@@ -10,6 +10,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	int i = 0;
 	char *separator = "";
+	char *str;
 
 	va_start(ap, format);
 	while (format != NULL && format[i] != '\0')
@@ -29,7 +30,10 @@ void print_all(const char * const format, ...)
 				separator = ", ";
 				break;
 			case 's':
-				printf("%s%s", separator, va_arg(ap, char *));
+				str = va_arg(ap, char *);
+				if (str == NULL)
+					printf("%s(nil)", separator);
+				printf("%s%s", separator, str);
 				separator = ", ";
 				break;
 		}
