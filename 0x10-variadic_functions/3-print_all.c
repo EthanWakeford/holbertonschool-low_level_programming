@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	int is_not_first = 0;
 
 	va_start(ap, format);
-	while (format && format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		if (is_not_first)
 			printf(", ");
