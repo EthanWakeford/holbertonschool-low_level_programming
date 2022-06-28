@@ -33,7 +33,8 @@ void print_all(const char * const format, ...)
 				str = va_arg(ap, char *);
 				if (str == NULL)
 					printf("%s(nil)", separator);
-				printf("%s%s", separator, str);
+				else
+					printf("%s%s", separator, str);
 				separator = ", ";
 				break;
 		}
