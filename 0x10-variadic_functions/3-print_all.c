@@ -32,7 +32,6 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(ap, char *));
 				break;
 			default:
-				is_not_first = 0;
 				break;
 		}
 	i++;
