@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+*listint_len - listslength of list
+*@h: pointer to first item in list
+*Return: count of list
+*/
+
 size_t listint_len(const listint_t *h)
 {
 	const listint_t *p = h;
@@ -7,7 +13,7 @@ size_t listint_len(const listint_t *h)
 
 	while (p != NULL)
 	{
-		count ++;
+		count++;
 		p = p->next;
 	}
 	return (count);

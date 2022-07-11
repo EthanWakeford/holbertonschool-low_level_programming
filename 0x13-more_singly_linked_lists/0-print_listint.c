@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+*print_listint - prints out a list
+*@h: pointer to first item in list
+*Return: count of items in list
+*/
+
 size_t print_listint(const listint_t *h)
 {
 	const listint_t *p = h;
