@@ -8,7 +8,7 @@
 void print_binary(unsigned long int n)
 {
 	int i;
-	int arr[64];
+	int arr[32];
 
 	if (n == 0)
 		_putchar('0');
