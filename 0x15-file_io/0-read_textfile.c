@@ -2,9 +2,9 @@
 
 /**
 *read_textfile - reads a text file
-*@filename: name of file
-*@letters: amount of letters to print
-*Return: n
+*@filename: file to read from
+*@letters: amount of letters to read
+*Return: bytes written, or -1 if failure
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -19,10 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
-	{
-		return (0);
-		free(buf);
-	}
+		return (-1);
 	size = read(fd, buf, letters);
 	if (size < 0)
 		return (0);
