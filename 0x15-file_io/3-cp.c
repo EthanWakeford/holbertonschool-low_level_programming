@@ -9,14 +9,11 @@
 
 int main(int argc, char **argv)
 {
-	ssize_t fd_1, fd_2, output;
+	ssize_t fd_1, fd_2, print_len;
 	char buf[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	if (argv[1] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -31,8 +28,12 @@ int main(int argc, char **argv)
 	fd_2 = open(argv[2], O_TRUNC | O_CREAT | O_RDWR, 00664);
 	if (fd_2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	output = write(fd_2, buf, read(fd_1, buf, 1024));
-	if (output == -1)
+	print_len = write(fd_2, buf, read(fd_1, buf, 1024));
+	while (print_len == 1024)
+	{
+		print_len = write(fd_2, buf, read(fd_1, buf, 1024));
+	}
+	if (print_len == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (close(fd_1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %ld\n", fd_1), exit(100);
