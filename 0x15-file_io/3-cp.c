@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	fd_1 = open(argv[1], O_RDONLY);
 	fd_2 = open(argv[2], O_CREAT | O_RDWR, 00664);
 	output = write(fd_2, buf, read(fd_1, buf, 1024));
-	if ((output == -1) | (fd_1 == -1))
+	if ((output == -1) | (fd_2 == -1))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
