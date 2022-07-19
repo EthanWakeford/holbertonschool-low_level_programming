@@ -26,12 +26,11 @@ int main(int argc, char **argv)
 	do {
 		rd_check = read(fd_1, buf, 1024);
 		if (rd_check < 0)
-		{	
+		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		print_len = write(fd_2, buf, rd_check);
-		
 	} while (print_len == 1024);
 	if (print_len == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
