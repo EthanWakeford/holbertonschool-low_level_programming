@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		}
 		print_len = write(fd_2, buf, rd_check);
 		
-	} while (print_len == 1024)
+	} while (print_len == 1024);
 	if (print_len == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (close(fd_1) == -1)
