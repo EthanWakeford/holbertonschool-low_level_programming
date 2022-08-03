@@ -34,8 +34,8 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (is_not_first)
 				printf(", ");
-			printf("\'%s\': ", ht->array[i]->key);
-			printf("\'%s\'", ht->array[i]->value);
+			printf("'%s': ", ht->array[i]->key);
+			printf("'%s'", ht->array[i]->value);
 			if (ht->array[i]->next != NULL)
 				printlist(ht->array[i]);
 			is_not_first = 1;
