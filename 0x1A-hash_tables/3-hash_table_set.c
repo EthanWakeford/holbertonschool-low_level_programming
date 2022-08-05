@@ -21,23 +21,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
-	if (ht->array[index] != NULL)
+	new_node->next = ht->array[index];
+	for (tmp = new_node->next; tmp != NULL; tmp = tmp->next)
 	{
-		for (tmp = ht->array[index]; tmp != NULL; tmp = tmp->next)
+		if (strcmp(tmp->key, key) == 0)
 		{
-			if (strcmp(tmp->key, key) == 0)
-			{
-				free(tmp->key);
-				if (tmp->value != NULL)
-					free(tmp->value);
-				free(tmp);
-				break;
-			}
+			free(tmp->key);
+			free(tmp->value);
+			free(tmp);
 		}
-		new_node->next = ht->array[index];
 	}
-	else
-		new_node->next = NULL;
 	ht->array[index] = new_node;
 	return (1);
 }
