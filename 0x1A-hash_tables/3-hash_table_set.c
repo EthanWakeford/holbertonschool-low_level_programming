@@ -24,6 +24,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		for (tmp = ht->array[index]; tmp != NULL; tmp = tmp->next)
 		{
+			if (strcmp(tmp->key, key) == 0)
+				free(tmp);
 		}
 		new_node->next = ht->array[index];
 	}
