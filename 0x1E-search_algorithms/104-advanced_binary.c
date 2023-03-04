@@ -43,7 +43,7 @@ int advanced_binary_recursion(int *array, int value, int low, int high)
 		if (low == mid)
 			return (mid);
 		else
-			return (advanced_binary_recursion(array, value, low, mid - 1));
+			return (advanced_binary_recursion(array, value, low, mid));
 	}
 
 	if (high <= mid)
@@ -51,7 +51,7 @@ int advanced_binary_recursion(int *array, int value, int low, int high)
 
 	if (array[mid] > value)
 	{
-		return (advanced_binary_recursion(array, value, low, mid - 1));
+		return (advanced_binary_recursion(array, value, low, mid));
 	}
 	else
 	{
