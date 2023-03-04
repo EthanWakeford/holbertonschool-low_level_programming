@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - uses binary search to search for a value in a sorted array
+ * advanced_binary_search - uses binary search to search for a value in a sorted array
  *
  * @array: array to search in
  * @size: size of array
@@ -21,7 +21,7 @@ int advanced_binary(int *array, size_t size, int value)
 }
 
 /**
- * binary_recursion - helper function that uses recursion
+ * advanced_binary_recursion - helper function that uses recursion
  *
  * @array: array to sort
  * @value: value to search for
@@ -38,7 +38,6 @@ int advanced_binary_recursion(int *array, int value, int low, int high)
 	print_array(array, low, high);
 
 	mid = ((high - low) / 2) + low;
-	printf("mid: %d, value: %d\n", mid, array[mid]);
 	if (array[mid] == value)
 	{
 		if (low == mid)
